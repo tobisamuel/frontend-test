@@ -8,9 +8,16 @@ const config: Config = {
   ],
   theme: {
     extend: {
+      animation: { slide: "slide 30s liner infinite" },
       colors: {
         background: "var(--background)",
         foreground: "var(--foreground)",
+      },
+      keyframes: {
+        slide: {
+          "0%, 100%": { transform: "translateX(0)" },
+          "50%": { transform: "translateX(-100%)" },
+        },
       },
     },
   },
